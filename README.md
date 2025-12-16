@@ -1,3 +1,6 @@
+### `FDI-Calculations.py`
+- Initial assignment in EC 484/584
+- Provides thorough calculations
 
 ### `model.py`
 Contains all analytical model functions used across the notebooks, including:
