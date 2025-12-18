@@ -1,0 +1,105 @@
+Two Firms:
+Slovenia (upstream firm):
+- Ball bearings cost of production: 6 per unit
+Greece (downstream firm):
+- One machine, Greek must by 2 ball bearings
+- Production cost of 4 per machine
+Machines sold according to demand curve:
+𝑃 = 240 − 2𝑄
+
+Scenario: Separated (Independent Firms)
+
+
+1.) Profit Function - Greek Firm (Downstream)
+π𝐺 = 𝑇𝑅 − 𝑇𝐶
+𝑇𝑅 = 𝑃 * 𝑄 = (240 − 2𝑄)𝑄
+𝑇𝐶 = 4𝑄 + 𝑃𝑏* 2𝑄
+
+The Profit Function for Greece is:
+π𝐺 = (240 − 2𝑄)𝑄 − 4𝑄 − 𝑃𝑏 * 2𝑄
+
+
+2.) Optimal Quantity of Machines produced/sold by the Downstream Firm:
+
+Choose Q to maximize profit function:
+⇒ ∂π𝐺/∂𝑄 = 0 
+240 − 4𝑄 − 4 − 2𝑃𝑏 = 0 
+𝑄 =(236−2𝑃𝑏) /4
+
+The optimal quantity of machines produced and sold by the Greek firm, taking price of ball
+bearings as given is .
+(236−2𝑃𝑏)/4
+
+
+3.) Profit Function - Slovenian Firm (Upstream)
+π𝑆 = 𝑇𝑅 − 𝑇𝐶
+𝑇𝑅 = 𝑃𝑏 * 2𝑞
+𝑇𝐶 = 6𝑄
+
+Profit Function for Slovenia:
+π𝑆 = 𝑃𝑏 * 2𝑞 − 6𝑞 
+π𝑆 = (2𝑃𝑏 − 6)𝑞
+
+Substituting quantity demanded from Greece:
+π𝑆 = (2𝑃𝑏 − 6) *(236−2𝑃𝑏)/4
+π𝑆 = (1/4)(472𝑃𝑏 − 4𝑃𝑏^2 − 1416 + 12𝑃𝑏)
+π𝑆 = 121𝑃𝑏 − 𝑃𝑏^2 − 354
+
+
+4.) Independent Firm Equilibriums:
+
+a) Equilibrium Price of ball bearings: 60.5
+∂π𝑆 / ∂𝑃𝑏 = 0 
+121 − 2𝑃𝑏 = 0
+𝑃𝑏 = 60. 5
+
+b) Equilibrium Price of a machine: 182.5
+𝑃 = 240 − 2𝑄
+𝑃 = 240 − 2(28.75)
+𝑃 = 182. 5
+
+c) Quantity of machines produced/sold: 28.75
+𝑄 = (236−2(60.5))/4 = 28. 75
+
+d) Quantity of ball bearings produced/sold: 57.5
+𝑞 = 2𝑄
+𝑞 = 57. 5
+
+e) Profit - Slovenian firm: 3306.25
+π𝑆 = 121(60. 5) − 60.5^2 − 354 
+π𝑆 = 7320.5 − 3660.25 − 354
+π𝑆 = 3306. 25
+
+f) Profits - Greek firm: 1653.13
+π𝐺 = (240 − 2𝑄)𝑄 − 4𝑄 − 𝑃𝑏*2𝑄
+(240 − 2(28.75))28.7 − 4(28.75) − 60.5 * 2 * 28.75
+π𝐺 = 1653. 13
+
+
+Scenario: Integrated MNC (Full Integration)
+
+5. Profit Function - Greek Multinational Firm(MNC):
+π𝑀𝑁𝐶 = π𝐺+ π𝑆 − 𝐹𝐶
+π𝑀𝑁𝐶 = (240 − 2𝑄)𝑄 − 16𝑄 + 𝑃𝑏* 𝑞 − 6𝑞 − 1000
+
+Slovenia:
+π𝑆 = 𝑃𝑏* 𝑞 − 6𝑞 − 1000
+𝑃𝑏 = 6 ( I'm assuming derivative here?)
+
+Greece:
+π𝐺 = (240 − 2𝑄)𝑄 − 4 𝑄 − 6 * 2𝑄 − 1000
+⇒ (240 - 2Q)Q - 16 Q - 1000
+
+6. Optimal Quantity of machines produced(MNC):
+240 - 4Q - 16 = 0 ( derivative here I think )
+4Q = 224
+Optimal Quantity Machines
+Q = 56
+
+Equilibrium price of Machines:
+P = 240 - 2(56) = 128 
+
+Total Profit:
+π𝑀𝑁𝐶 = (128)56 − 16(56) + 𝑃𝑏* 0 − 6(0) − 1000
+π𝑀𝑁𝐶 = 5272
+
