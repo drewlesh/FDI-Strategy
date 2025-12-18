@@ -84,14 +84,14 @@ Scenario: Integrated MNC (Full Integration)
 
 Slovenia:
 π𝑆 = 𝑃𝑏* 𝑞 − 6𝑞 − 1000
-𝑃𝑏 = 6 ( I'm assuming derivative here?)
+𝑃𝑏 = 6 ( derivative )
 
 Greece:
 π𝐺 = (240 − 2𝑄)𝑄 − 4 𝑄 − 6 * 2𝑄 − 1000
 ⇒ (240 - 2Q)Q - 16 Q - 1000
 
 6. Optimal Quantity of machines produced(MNC):
-240 - 4Q - 16 = 0 ( derivative here I think )
+240 - 4Q - 16 = 0 ( derivative )
 4Q = 224
 Optimal Quantity Machines
 Q = 56
