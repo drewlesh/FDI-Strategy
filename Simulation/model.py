@@ -1,6 +1,8 @@
 import numpy as np
+import sympy as sp
 
-def run_model(
+
+def vertical_fdi_separated(
     demand_intercept: float = 240,
     demand_slope: float = 2,
     bearing_cost: float = 6,
@@ -8,45 +10,40 @@ def run_model(
     bearings_per_machine: int = 2
 ):
     """
-    Solves the vertical FDI model with separated firms.
+    Interactive Vertical FDI(Scenario 1: Separated Firms)
     Returns equilibrium prices, quantities, and profits.
     """
 
-        # -- Greek firm's reacting function -- #
-        # Q = *236 - 2*P_b) / 4
+        # Returns the quantity of machines for Greek firm.
+        # If Q_override is provided, use it; otherwise use profit-maximizing Q.
     def greek_quantity(P_b):
         return (demand_intercept - machine_cost - bearings_per_machine * P_b) / (2 * demand_slope)
 
         # Slovenian profit as function of P_b -- #
     def slovenian_profit(P_b):
         Q = greek_quantity(P_b)
-        q = bearings_per_machine * Q
-        return (P_b * q) - (bearing_cost * q)
+        return (2 * P_b - bearing_cost) * Q  
     
-        # Solve Slovenian FOC analytically
-        # From derivation: P_b = 60.5
-    P_b_star = (demand_intercept - machine_cost) / 4
+    # --- Equilibrium Prices & Quantities --- #
+    P_b_star = (demand_intercept - machine_cost + 0.5 * bearings_per_machine * bearing_cost) / (2 * bearings_per_machine) 
 
-        # Equilibrium Quantities
+
     Q_star = greek_quantity(P_b_star)
+    Q_star = max(0, Q_star)
     q_star = bearings_per_machine * Q_star
+    q_star = max(0, q_star)
 
-        # Market price of machines
     P_star = demand_intercept - demand_slope * Q_star
-
-        # Profits
+    P_star = max(0, P_star)
+    # Profits
     pi_S = slovenian_profit(P_b_star)
-    pi_G = (
-        P_star * Q_star
-        - machine_cost * Q_star
-        - P_b_star * bearings_per_machine * Q_star
-    )
+    pi_G = (P_star * Q_star - machine_cost * Q_star - P_b_star * bearings_per_machine * Q_star)
 
     return {
-        'ball_bearing price': P_b_star,
+        'ball_bearing_price': P_b_star,
         'machine_price': P_star,
-        'machines_quanity': Q_star,
-        'bearings_quantity': q_star,
-        'slovenian_profit': pi_S,
-        'greek_profit': pi_G
+        'machine_quantity': Q_star,
+        'bearing_quantity': q_star,
+        'upstream_profit': pi_S,
+        'downstream_profit': pi_G
     }
