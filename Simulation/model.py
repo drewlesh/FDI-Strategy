@@ -47,3 +47,37 @@ def vertical_fdi_separated(
         'upstream_profit': pi_S,
         'downstream_profit': pi_G
     }
+
+
+def vertical_fdi_integrated(
+        demand_intercept: float = 240,
+        demand_slope: float = 2,
+        bearing_cost: float = 6,
+        machine_cost: float = 4, 
+        bearings_per_machine: int = 2,
+        fixed_cost: float = 1000
+):
+    """
+    Vertically Integrated Firm.
+    Returns prices, quantities and profits.
+    """
+
+    effective_downstream_cost = machine_cost + bearings_per_machine * bearing_cost
+
+    Q_star = max(0, (demand_intercept - effective_downstream_cost) / (2 * demand_slope))
+
+    P_star = max(0, demand_intercept - demand_slope * Q_star)
+
+    q_star = bearings_per_machine * Q_star
+
+    # Profits
+    pi_I = P_star * Q_star - effective_downstream_cost * Q_star - fixed_cost
+
+    return {
+        'ball_bearing_price': bearing_cost,
+        'machine_price': P_star,
+        'machine_quantity': Q_star,
+        'bearing_quantity': q_star,
+        'integrated_profit': pi_I,
+        'fixed_cost': fixed_cost
+    }
